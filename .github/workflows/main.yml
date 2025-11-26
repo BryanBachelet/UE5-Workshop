@@ -33,9 +33,13 @@ jobs :
   Test :
     runs-on : self-hosted
     steps:
+      - uses: actions/checkout@v4
+
       - name: Test Builds
         shell: cmd
-        run: ${{env.GITHUB_WORKSPACE}}/TestAutomation.bat
+        run: ${{env.ENGINE_PATH }}/Engine/Binaries/Win64/UnrealEditor-Cmd.exe ${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject -execcmds="Automation RunTests Project;Quit" -stdout -unattended -NOSPLASH -NullRHI -log -ABSLOG="${{env.log_path}}"
+
+        # run: ${{env.GITHUB_WORKSPACE}}/TestAutomation.bat
 
  
 
