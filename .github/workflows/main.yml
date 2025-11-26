@@ -33,7 +33,7 @@ jobs :
       
       - name: Tests Build
         shell : cmd
-        run: ${{env.ENGINE_PATH }}/Engine/Binaries/Win64/UnrealEditor-Cmd.exe %~dp0ProjectName.uproject -execcmds="Automation RunTests Project;Quit" -stdout -unattended -NOSPLASH -NullRHI -log -ABSLOG="${{env.log_path}}"
+        run: ${{env.ENGINE_PATH }}/Engine/Binaries/Win64/UnrealEditor-Cmd.exe %~dp0${{env.ProjectName}}.uproject -execcmds="Automation RunTests Project;Quit" -stdout -unattended -NOSPLASH -NullRHI -log -ABSLOG="${{env.log_path}}"
  
 
 
