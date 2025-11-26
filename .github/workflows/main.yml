@@ -25,7 +25,7 @@ jobs :
 
       - name: Generate intermediates and binaries
         shell : bash
-        run: UE_5.6/Engine/Build/BatchFiles/Build.bat "${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject"
+        run:  ${{env.ENGINE_PATH }}/Engine/Build/BatchFiles/Build.bat "${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject"
 
       - name: Build Project
         shell : bash 
