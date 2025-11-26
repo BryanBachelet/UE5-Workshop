@@ -11,7 +11,7 @@ on:
 env :
   ProjectName : UE5_Workshop
   log_path: C:/Users/bryan/OneDrive/Bureau/ISART/UE5_Workshop
-  ENGINE_PATH: C:/Program Files/Epic Games/UE_5.6
+  ENGINE_PATH: C:/Program\ Files/Epic Games/UE_5.6
   GITHUB_WORKSPACE: C:\Users\bryan\OneDrive\Bureau\ISART\UE5_Workshop
 
 
