@@ -33,7 +33,7 @@ jobs :
       
       - name: Tests Builds
         shell : cmd
-        run: ${{env.ENGINE_PATH }}/Engine/Binaries/Win64/UnrealEditor-Cmd.exe "${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject"
+        run: ${{env.ENGINE_PATH }}/Engine/Binaries/Win64/UnrealEditor-Cmd.exe ${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject
  
 
 
