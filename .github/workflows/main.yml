@@ -9,7 +9,7 @@ on:
     - main
 
 env :
-  ProjectName : UE5_Workspace
+  ProjectName : UE5_Workshop
   log_path: C:/Users/bryan/OneDrive/Bureau/ISART/UE5_Workshop
   ENGINE_PATH: C:/Program Files/Epic Games/UE_5.6
   GITHUB_WORKSPACE: C:\Users\bryan\OneDrive\Bureau\ISART\UE5_Workshop
@@ -20,7 +20,7 @@ jobs :
     runs-on: self-hosted
     steps:
       - name: Generate Project Files
-        shell : bash
+        shell : cmd
         run: ${{env.ENGINE_PATH}}/Engine/Build/BatchFiles/Build.bat -projectfiles -project="${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject" -game -rocket -progress -log="%~dp0\Saved\Logs\UnrealVersionSelector-2025.05.07-00.56.10.log"
 
       - name: Generate intermediates and binaries
