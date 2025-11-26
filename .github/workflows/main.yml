@@ -30,7 +30,7 @@ jobs :
 
       - name: Build Project
         shell : bash 
-        run :  ${{env.ENGINE_PATH }}\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun `
+        run :  ${{env.ENGINE_PATH }}/Engine/Build/BatchFiles/RunUAT.bat" BuildCookRun `
             -project="${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject" `
             -noP4 -platform=Win64 -clientconfig=Shipping -serverconfig=Development `
             -cook -allmaps -build -stage -pak -archive `
