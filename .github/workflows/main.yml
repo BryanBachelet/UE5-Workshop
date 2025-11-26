@@ -31,7 +31,7 @@ jobs :
         shell : cmd 
         run : ${{env.ENGINE_PATH }}/Engine/Build/BatchFiles/RunUAT.bat BuildCookRun -project="${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject" -noP4 -platform=Win64 -clientconfig=Shipping -serverconfig=Development -cook -allmaps -build -stage -pak -archive -archivedirectory="${{env.GITHUB_WORKSPACE}}\Build"
       
-      - name: Tests Builds
+      - name: Test Builds
         shell : cmd
         run: ${{env.ENGINE_PATH }}/Engine/Binaries/Win64/UnrealEditor-Cmd.exe ${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject
  
