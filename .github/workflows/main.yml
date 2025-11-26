@@ -33,7 +33,7 @@ jobs :
       
       - name: Test Builds
         shell : cmd
-        run: C:\"Program Files"\"Epic Games"\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe C:\Users\bryan\OneDrive\Bureau\ISART\UE5_Workshop\UE5_Workshop.uproject
+        run: C:\"Program Files"\"Epic Games"\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe "C:\Users\bryan\OneDrive\Bureau\ISART\UE5_Workshop\UE5_Workshop.uproject"
  
 
 
