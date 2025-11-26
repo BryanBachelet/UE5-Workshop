@@ -1,0 +1,22 @@
+name: Hello World
+
+on: 
+  push: 
+    branches:
+      - main
+  pull_request:
+    branches:
+    - main
+
+
+jobs :
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Building step
+        run: echo Building...
+      
+      - name: Testing step
+        run: echo Testing...
+
+
