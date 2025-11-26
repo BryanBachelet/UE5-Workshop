@@ -25,7 +25,8 @@ jobs :
 
       - name: Generate intermediates and binaries
         shell : cmd
-        run:  ${{env.ENGINE_PATH }}/Engine/Build/BatchFiles/Build.bat "${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject"
+        run:  ${{env.ENGINE_PATH }}/Engine/Build/BatchFiles/Build.bat "${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject" ${{env.ProjectName}} Win64 Development
+
 
       - name: Build Project
         shell : bash 
