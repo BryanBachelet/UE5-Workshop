@@ -19,7 +19,7 @@ jobs :
     steps:
       - name: Generate Project Files
         shell : bash
-        run: ${{env.ENGINE_PATH}}/Engine/Build/BatchFiles/Build.bat -projectfiles -project="%GITHUB_WORKSPACE%\${{env.ProjectName}}.uproject" -game -rocket -progress -log="%~dp0\Saved\Logs\UnrealVersionSelector-2025.05.07-00.56.10.log"
+        run: ${{env.ENGINE_PATH}}/Engine/Build/BatchFiles/Build.bat -projectfiles -project="${{github.workspace}}\${{env.ProjectName}}.uproject" -game -rocket -progress -log="%~dp0\Saved\Logs\UnrealVersionSelector-2025.05.07-00.56.10.log"
 
       - name: Generate intermediates and binaries
         shell : bash
