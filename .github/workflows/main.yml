@@ -27,10 +27,14 @@ jobs :
         shell : cmd
         run:  ${{env.ENGINE_PATH }}/Engine/Build/BatchFiles/Build.bat "${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject" ${{env.ProjectName}} Win64 Development
 
-
       - name: Build Project
         shell : cmd 
         run : ${{env.ENGINE_PATH }}/Engine/Build/BatchFiles/RunUAT.bat BuildCookRun -project="${{env.GITHUB_WORKSPACE}}\${{env.ProjectName}}.uproject" -noP4 -platform=Win64 -clientconfig=Shipping -serverconfig=Development -cook -allmaps -build -stage -pak -archive -archivedirectory="${{env.GITHUB_WORKSPACE}}\Build"
+      
+      - name: Tests Build
+        shell : cmd
+        run: ${{env.ENGINE_PATH }}/Engine/Binaries/Win64/UnrealEditor-Cmd.exe %~dp0ProjectName.uproject -execcmds="Automation RunTests Project;Quit" -stdout -unattended -NOSPLASH -NullRHI -log -ABSLOG="${{env.log_path}}"
+ 
 
 
 
